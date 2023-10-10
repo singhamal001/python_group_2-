@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import time
 import random
+import matplotlib.pyplot as plt
 
 class Sort(ABC):
     """Abstract base class for sorting."""
@@ -100,3 +101,13 @@ if __name__ == "__main__":
 
     print("Bubble Sort timings :: ", bubble_sort_times)
     print("Merge Sort timings :: ", merge_sort_times)
+
+
+data_size = [50, 500, 1000, 5000, 10000, 50000, 100000, 500000]
+
+plt.figure(figsize = (10,6))
+# ymin, ymax = pit.ylim)
+# pit.ylim(ymin * scale_factor, ymax * scale_factor) pit.plot(data_sizes, bubble_sort_times, label:"Bubble Sort Timings") plt.plot (data_sizes, merge_sort_times, label="Merge Sort Timings™') plt.xlabel("Data length") plt.ylabel("Time")
+plt.legend()
+plt.title("Bubble vs Merge Sort time comparison")
+plt.show()
